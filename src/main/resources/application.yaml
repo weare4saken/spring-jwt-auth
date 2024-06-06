@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: "spring-jwt-auth"
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/postgres"
+    username: "postgres"
+    password: "postgres"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #    show-sql: true
+    #    properties:
+    #      hibernate:
+    #        format_sql: true
+    defer-datasource-initialization: true
+server:
+  port: 8080
+jwt:
+  token:
+    expiration: 24h
